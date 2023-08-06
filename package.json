@@ -1,0 +1,49 @@
+{
+  "name": "@2jsdev/icons",
+  "version": "1.0.0",
+  "description": "SVG-based React icon components",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "type": "module",
+  "keywords": [
+    "React",
+    "SVG",
+    "Icons"
+  ],
+  "author": "Jordy Morales <dev.morales.jordy@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2jsdev/icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/2jsdev/icons/issues"
+  },
+  "homepage": "https://github.com/2jsdev/icons#readme",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rimraf src && rimraf dist",
+    "build": "npm run svgr && rollup -c",
+    "svgr": "svgr --icon --title-prop --replace-attr-values '#0C0310=currentColor' -d src -- assets"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@svgr/cli": "^8.0.1",
+    "rimraf": "^5.0.1",
+    "rollup": "^3.27.2",
+    "rollup-plugin-filesize": "^10.0.0",
+    "@rollup/plugin-terser": "^0.4.3"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.22.6"
+  }
+}
