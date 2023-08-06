@@ -1,6 +1,6 @@
 {
   "name": "@2jsdev/icons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SVG-based React icon components",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -29,8 +29,8 @@
     "svgr": "svgr --icon --title-prop --replace-attr-values '#0C0310=currentColor' -d src -- assets"
   },
   "peerDependencies": {
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.22.9",
