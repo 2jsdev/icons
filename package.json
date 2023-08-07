@@ -1,9 +1,10 @@
 {
   "name": "@2jsdev/icons",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "SVG-based React icon components",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
+  "types": "dist/types/index.d.ts",
   "type": "module",
   "keywords": [
     "React",
