@@ -1,6 +1,6 @@
 {
   "name": "@2jsdev/icons",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "SVG-based React icon components",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -24,9 +24,10 @@
     "dist"
   ],
   "scripts": {
-    "prebuild": "rimraf src && rimraf dist",
+    "prebuild": "rimraf dist",
     "build": "npm run svgr && rollup -c",
-    "svgr": "svgr --icon --title-prop --replace-attr-values '#0C0310=currentColor' -d src -- assets"
+    "svgr": "svgr --icon --title-prop --replace-attr-values '#0C0310=currentColor' -d src --ext tsx -- assets",
+    "typegen": "tsc --emitDeclarationOnly"
   },
   "peerDependencies": {
     "react": "^18.0.0",
@@ -36,12 +37,17 @@
     "@babel/plugin-transform-runtime": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
     "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
     "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.2",
     "@svgr/cli": "^8.0.1",
+    "@types/react": "^18.2.18",
+    "@types/react-dom": "^18.2.7",
     "rimraf": "^5.0.1",
     "rollup": "^3.27.2",
     "rollup-plugin-filesize": "^10.0.0",
-    "@rollup/plugin-terser": "^0.4.3"
+    "typescript": "^5.1.6"
   },
   "dependencies": {
     "@babel/runtime": "^7.22.6"
